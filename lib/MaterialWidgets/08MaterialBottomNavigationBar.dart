@@ -7,7 +7,10 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(title: "MaterialApp示例", home: MyHomePage());
+    return MaterialApp(
+      title: "MaterialApp示例",
+      home: MyHomePage(),
+    );
   }
 }
 
@@ -23,7 +26,7 @@ class _MyHomePageState extends State<MyHomePage> {
   final _widgetOptions = [
     Text("Index 0: 信息"),
     Text("Index 1: 通讯录"),
-    Text("Index 2: 发现")
+    Text("Index 2: 发现"),
   ];
 
   @override

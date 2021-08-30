@@ -22,13 +22,12 @@ class MyApp extends StatelessWidget {
           ),
         ),
         floatingActionButton: FloatingActionButton(
-          onPressed: (){},
+          onPressed: () {},
           tooltip: "增加",
           child: Icon(Icons.add),
         ),
         floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
       ),
-
     );
   }
 }

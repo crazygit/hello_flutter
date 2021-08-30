@@ -9,15 +9,16 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: "CupertinoActivityIndicator示例",
+      title: "CupertinoButton组件示例",
       home: Scaffold(
         appBar: AppBar(
-          title: Text("CupertinoActivityIndicator示例"),
+          title: Text("CupertinoButton组件示例"),
         ),
         body: Center(
-          child: CupertinoActivityIndicator(
-            radius: 60.0,
-          ),
+          child: CupertinoButton(
+              child: Text("CupertinoButton"),
+              onPressed: () {},
+              color: Colors.blue),
         ),
       ),
     );

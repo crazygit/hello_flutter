@@ -29,7 +29,9 @@ class LayoutDemo extends StatelessWidget {
               ],
             ),
             ListTile(
-              leading: CircleAvatar(child: Icon(Icons.color_lens)),
+              leading: CircleAvatar(
+                child: Icon(Icons.color_lens),
+              ),
               title: Text("个性装扮"),
             ),
             ListTile(

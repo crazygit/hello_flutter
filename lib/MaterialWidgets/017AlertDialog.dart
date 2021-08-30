@@ -8,20 +8,33 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-        title: "AlertDailog组件示例",
-        home: Scaffold(
-            appBar: AppBar(title: Text("AlertDailog组件示例")),
-            body: Center(
-              child: AlertDialog(
-                title: const Text("提示"),
-                content: SingleChildScrollView(
-                    child: ListBody(
-                        children: [Text("是否要删除"), Text("一旦数据删除不可恢复")])),
-                actions: [
-                  TextButton(onPressed: () {}, child: Text("确定")),
-                  TextButton(onPressed: () {}, child: Text("取消")),
+      title: "AlertDialog组件示例",
+      home: Scaffold(
+        appBar: AppBar(title: Text("AlertDialog组件示例")),
+        body: Center(
+          child: AlertDialog(
+            title: const Text("提示"),
+            content: SingleChildScrollView(
+              child: ListBody(
+                children: [
+                  Text("是否要删除"),
+                  Text("一旦数据删除不可恢复"),
                 ],
               ),
-            )));
+            ),
+            actions: [
+              TextButton(
+                onPressed: () {},
+                child: Text("确定"),
+              ),
+              TextButton(
+                onPressed: () {},
+                child: Text("取消"),
+              ),
+            ],
+          ),
+        ),
+      ),
+    );
   }
 }

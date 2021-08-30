@@ -32,15 +32,23 @@ class TabBarSample extends StatelessWidget {
             title: const Text("TabBar选项卡示例"),
             bottom: TabBar(
               tabs: items
-                  .map((e) => Tab(text: e.title, icon: Icon(e.icon)))
+                  .map(
+                    (e) => Tab(
+                      text: e.title,
+                      icon: Icon(e.icon),
+                    ),
+                  )
                   .toList(),
             ),
           ),
           body: TabBarView(
             children: items
-                .map((e) => Padding(
+                .map(
+                  (e) => Padding(
                     padding: const EdgeInsets.all(16.0),
-                    child: SelectedView(item: e)))
+                    child: SelectedView(item: e),
+                  ),
+                )
                 .toList(),
           ),
         ),
@@ -52,6 +60,7 @@ class TabBarSample extends StatelessWidget {
 class SelectedView extends StatelessWidget {
   const SelectedView({Key? key, required this.item}) : super(key: key);
   final ItemView item;
+
   @override
   Widget build(BuildContext context) {
     final TextStyle? textStyle = Theme.of(context).textTheme.headline4;
@@ -60,7 +69,11 @@ class SelectedView extends StatelessWidget {
       child: Center(
         child: Column(
           children: [
-            Icon(item.icon, size: 128.0, color: textStyle?.color),
+            Icon(
+              item.icon,
+              size: 128.0,
+              color: textStyle?.color,
+            ),
             Text(
               item.title,
               style: textStyle,

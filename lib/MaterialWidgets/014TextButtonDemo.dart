@@ -12,10 +12,11 @@ class MyApp extends StatelessWidget {
       home: Scaffold(
         appBar: AppBar(title: Text("TextButton示例")),
         body: Center(
-            child: TextButton(
-          child: Text("TextButton示例"),
-          onPressed: () {},
-        )),
+          child: TextButton(
+            child: Text("TextButton示例"),
+            onPressed: () {},
+          ),
+        ),
       ),
     );
   }

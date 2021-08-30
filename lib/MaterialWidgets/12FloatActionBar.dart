@@ -13,7 +13,7 @@ class MyApp extends StatelessWidget {
           appBar: AppBar(
             title: Text("FloatActionBar示例"),
           ),
-          floatingActionButton: FloattingActionButtonWrapper(),
+          floatingActionButton: FloatingActionButtonWrapper(),
           floatingActionButtonLocation:
               FloatingActionButtonLocation.centerFloat,
         ));
@@ -22,8 +22,8 @@ class MyApp extends StatelessWidget {
 
 // 实际使用的时候发现必须将ScaffoldMessenger保证在一个Widget里面才能正常工作
 // https://stackoverflow.com/questions/66833689/flutter-no-scaffoldmessenger-widget-found
-class FloattingActionButtonWrapper extends StatelessWidget {
-  const FloattingActionButtonWrapper({Key? key}) : super(key: key);
+class FloatingActionButtonWrapper extends StatelessWidget {
+  const FloatingActionButtonWrapper({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

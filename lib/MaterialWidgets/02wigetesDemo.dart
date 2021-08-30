@@ -9,31 +9,32 @@ class WidgetsDemoApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-        title: "容器组件示例",
-        theme: ThemeData(
-            brightness: Brightness.light,
-            primarySwatch: Colors.blue,
-            primaryColor: Colors.lightGreen[600],
-            accentColor: Colors.orange[600]),
-        home: Scaffold(
-          appBar: AppBar(title: Text("容器组件示例")),
-          body: Column(
-            children: [
-              ContainerDemo(),
-              TextDemo(),
-              ImageDemo(),
-              IconDemo(),
-              IconButtonDemo(),
-              ElevatedButtonDemo(),
-              // listView 不能直接放置在Column里面，需要使用Container限定高度
-              // https://stackoverflow.com/questions/45669202/how-to-add-a-listview-to-a-column-in-flutter
-              Container(
-                height: 120,
-                child: ListViewDemo(),
-              ),
-            ],
-          ),
-        ));
+      title: "容器组件示例",
+      theme: ThemeData(
+          brightness: Brightness.light,
+          primarySwatch: Colors.blue,
+          primaryColor: Colors.lightGreen[600],
+          accentColor: Colors.orange[600]),
+      home: Scaffold(
+        appBar: AppBar(title: Text("容器组件示例")),
+        body: Column(
+          children: [
+            ContainerDemo(),
+            TextDemo(),
+            ImageDemo(),
+            IconDemo(),
+            IconButtonDemo(),
+            ElevatedButtonDemo(),
+            // listView 不能直接放置在Column里面，需要使用Container限定高度
+            // https://stackoverflow.com/questions/45669202/how-to-add-a-listview-to-a-column-in-flutter
+            Container(
+              height: 120,
+              child: ListViewDemo(),
+            ),
+          ],
+        ),
+      ),
+    );
   }
 }
 
@@ -46,11 +47,17 @@ class ContainerDemo extends StatelessWidget {
       width: 100.0,
       height: 60,
       decoration: BoxDecoration(
-          color: Colors.white,
-          border: Border.all(color: Colors.grey, width: 8.0),
-          borderRadius: const BorderRadius.all(const Radius.circular(8.0))),
+        color: Colors.white,
+        border: Border.all(color: Colors.grey, width: 8.0),
+        borderRadius: const BorderRadius.all(
+          const Radius.circular(8.0),
+        ),
+      ),
       alignment: Alignment.center,
-      child: Text("容器示例", style: TextStyle(color: Colors.orange)),
+      child: Text(
+        "容器示例",
+        style: TextStyle(color: Colors.orange),
+      ),
     );
   }
 }

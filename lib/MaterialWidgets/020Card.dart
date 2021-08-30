@@ -13,16 +13,22 @@ class MyApp extends StatelessWidget {
         child: Column(
           children: [
             ListTile(
-                title: Text("这是一个地址",
-                    style: TextStyle(fontWeight: FontWeight.w300)),
-                subtitle: Text("公司名字"),
-                leading: Icon(Icons.home, color: Colors.lightBlue)),
+              title: Text(
+                "这是一个地址",
+                style: TextStyle(fontWeight: FontWeight.w300),
+              ),
+              subtitle: Text("公司名字"),
+              leading: Icon(Icons.home, color: Colors.lightBlue),
+            ),
             Divider(),
             ListTile(
-                title: Text("这是一个地址",
-                    style: TextStyle(fontWeight: FontWeight.w300)),
-                subtitle: Text("学校名字"),
-                leading: Icon(Icons.school, color: Colors.lightBlue)),
+              title: Text(
+                "这是一个地址",
+                style: TextStyle(fontWeight: FontWeight.w300),
+              ),
+              subtitle: Text("学校名字"),
+              leading: Icon(Icons.school, color: Colors.lightBlue),
+            ),
             Divider()
           ],
         ),
@@ -32,7 +38,9 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: "Card组件示例",
       home: Scaffold(
-        appBar: AppBar(title: Text("Card组件示例")),
+        appBar: AppBar(
+          title: Text("Card组件示例"),
+        ),
         body: Center(child: card),
       ),
     );
