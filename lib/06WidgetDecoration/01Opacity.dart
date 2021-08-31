@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 
 void main() => runApp(MaterialApp(
       title: "Opacity不透明度示例",
+      debugShowCheckedModeBanner: false,
       home: LayoutDemo(),
     ));
 
